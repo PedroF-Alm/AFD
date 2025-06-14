@@ -12,7 +12,7 @@ class AFD:
             try:
                 estado = self.transicoes[estado][i]
             except:
-                return f'Símbolo \'{i}\' não suportado pelo AFD no estado ({estado})'
+                return f'Símbolo \'{i}\' não reconhecido pelo AFD no estado ({estado})'
             if estado in self.estados_finais:
                 resultado += estado + ' '
                 estado = self.estado_inicial

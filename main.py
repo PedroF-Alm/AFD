@@ -3,7 +3,7 @@ import json
 from afd import AFD
 
 if len(sys.argv) < 2:
-    print("No input file.")
+    print("Arquivo de entrada não informado.")
     exit(1)
 
 with open('./config.json', 'r') as config:
