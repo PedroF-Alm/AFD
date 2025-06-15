@@ -54,7 +54,8 @@
               "|": {"|": "OR"},
               ".": {"1": "NUM_FLOAT", "2": "NUM_FLOAT", "3": "NUM_FLOAT",
                     "4": "NUM_FLOAT", "5": "NUM_FLOAT", "6": "NUM_FLOAT", 
-                    "7": "NUM_FLOAT", "8": "NUM_FLOAT", "9": "NUM_FLOAT"
+                    "7": "NUM_FLOAT", "8": "NUM_FLOAT", "9": "NUM_FLOAT",
+                    "0": "NUM_FLOAT"
                    },
               "c": {"h": "ch"},
               "b": {"o": "bo"},
@@ -63,17 +64,17 @@
               "NUM_INT": {"1": "NUM_INT", "2": "NUM_INT", "3": "NUM_INT",
                           "4": "NUM_INT", "5": "NUM_INT", "6": "NUM_INT",
                           "7": "NUM_INT", "8": "NUM_INT", "9": "NUM_INT", 
-                          ".": "."
+                          "0": "NUM_INT", ".": "."
                          },
-              "in": {"t": "INTDEF"},
+              "in": {"t": "int"},
               "fl": {"o": "flo"},
               "ch": {"a": "cha"},
               "bo": {"o": "boo"},
               "va": {"R": "var"},
               "re": {"t": "ret"},
               "flo": {"a": "floa"},
-              "cha": {"r": "CHAR_TYPE"},
-              "boo": {"l": "BOOL_TYPE"},
+              "cha": {"r": "char"},
+              "boo": {"l": "bool"},
               "var": {"1": "VAR", "2": "VAR", "3": "VAR", 
                       "4": "VAR", "5": "VAR", "6": "VAR",
                       "7": "VAR", "8": "VAR", "9": "VAR",
@@ -96,10 +97,14 @@
                       "V": "VAR", "W": "VAR", "X": "VAR",
                       "Y": "VAR", "Z": "VAR"
                      },
+              "int": {" ": "INTDEF"},
               "ret": {"u": "retu"},
-              "floa": {"t": "FLOATDEF"},
+              "floa": {"t": "float"},
+              "char": {" ": "CHAR_TYPE"},
+              "bool": {" ": "BOOL_TYPE"},
               "retu": {"r": "retur"},
-              "retur": {"n": "RETURN"},
+              "float": {" ": "FLOATDEF"},
+              "retur": {"n": "return"},
               "VAR": {"1": "VAR", "2": "VAR", "3": "VAR", 
                       "4": "VAR", "5": "VAR", "6": "VAR",
                       "7": "VAR", "8": "VAR", "9": "VAR",
@@ -120,6 +125,8 @@
                       "P": "VAR", "Q": "VAR", "R": "VAR",
                       "S": "VAR", "T": "VAR", "U": "VAR",
                       "V": "VAR", "W": "VAR", "X": "VAR",
-                      "Y": "VAR", "Z": "VAR"}
+                      "Y": "VAR", "Z": "VAR", " ": "VAR",
+                      "\n": "VAR"},
+              "return": {" ": "RETURN"}
              }
 }

@@ -8,14 +8,19 @@ class AFD:
     def processarLinha(self, linha):
         estado = self.estado_inicial
         resultado = ''
-        for i in linha:
+        i = 0
+        while i < len(linha):
+            simbolo = linha[i]
             try:
-                estado = self.transicoes[estado][i]
+                estado = self.transicoes[estado][simbolo]
             except:
-                return f'Símbolo \'{i}\' não reconhecido pelo AFD no estado ({estado})'
-            if estado in self.estados_finais:
-                resultado += estado + ' '
-                estado = self.estado_inicial
+                if estado in self.estados_finais:
+                    resultado += estado + ' '
+                    estado = self.estado_inicial
+                    i -= 1
+                else:
+                    return linha[0:i] + '\'' + simbolo + '\' ' + linha[i+1:-1] + f' Símbolo \'{simbolo}\' não reconhecido pelo AFD no estado ({estado})'
+            i += 1
         return resultado
     
     def processarArquivo(self, nome_arquivo_entrada):
@@ -23,6 +28,6 @@ class AFD:
             linha = arquivo_entrada.readline()
             saida = ''
             while linha != '':
-                saida += self.processarLinha(linha) + '\n'
+                saida += self.processarLinha(linha + ' ') + '\n'
                 linha = arquivo_entrada.readline()
-            return saida[0:len(saida)-1]
+            return saida[0:-1]
