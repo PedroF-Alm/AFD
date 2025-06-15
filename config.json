@@ -125,8 +125,7 @@
                       "P": "VAR", "Q": "VAR", "R": "VAR",
                       "S": "VAR", "T": "VAR", "U": "VAR",
                       "V": "VAR", "W": "VAR", "X": "VAR",
-                      "Y": "VAR", "Z": "VAR", " ": "VAR",
-                      "\n": "VAR"},
+                      "Y": "VAR", "Z": "VAR"},
               "return": {" ": "RETURN"}
              }
 }
