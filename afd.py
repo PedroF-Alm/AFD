@@ -13,13 +13,11 @@ class AFD:
             simbolo = linha[i]
             try:
                 estado = self.transicoes[estado][simbolo]
-            except:
                 if estado in self.estados_finais:
                     resultado += estado + ' '
                     estado = self.estado_inicial
-                    i -= 1
-                else:
-                    return linha[0:i] + '\'' + simbolo + '\' ' + linha[i+1:-1] + f' Símbolo \'{simbolo}\' não reconhecido pelo AFD no estado ({estado})'
+            except:
+                return linha[0:i] + '\'' + simbolo + '\' ' + linha[i+1:-1] + f' Símbolo \'{simbolo}\' não reconhecido pelo AFD no estado ({estado})'
             i += 1
         return resultado
     
