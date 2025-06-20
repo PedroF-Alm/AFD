@@ -9,9 +9,9 @@ O alisador foi divido em três arquivos mantendo o código limpo e permitindo mo
 Abaixo especificamos os arquivos e suas respectivas funcionalidades:
 
  main.py:
- >Arquivo principal que recebe e lê um arquivo de entrada fornecido por parâmentro no terminal 
- >O arquivo main.py lê o arquivo de configuração (config.jason) e através da função json.loads() decodifica o arquivo config.jason, pegando uma string no formato jason e transformando em um objeto python
- > Após fazer a leitura do arquivo jason, o algoritmo pega os valores associados às chaves de estado_inicial, estados_finais e transições e os guarda.
+>Arquivo principal que recebe e lê um arquivo de entrada fornecido por parâmentro no terminal 
+>O arquivo main.py lê o arquivo de configuração (config.jason) e através da função json.loads() decodifica o arquivo config.jason, pegando uma string no formato jason e transformando em um objeto python
+> Após fazer a leitura do arquivo jason, o algoritmo pega os valores associados às chaves de estado_inicial, estados_finais e transições e os guarda.
 > Com os valores guardados o algoritmo cria uma instância da classe AFD passando todas as configurações pra ele
 > Em afd.processarArquivo(sys.argv[1]) o algoritmo recebe o arquivo passado no terminal, lê o arquivo linha por linha e processa de acordo com as configurações especificadas em config.jason e guarda o resultado na variável saída e em seguida imprime no terminal
 > O algoritmo tem oferece a possibilidade de gravar saída em um arquivo txt caso seja passado um segundo argumento no trminal
