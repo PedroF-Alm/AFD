@@ -1,5 +1,5 @@
 class AFD:
-
+    
     def __init__(self, estado_inicial, estados_finais, transicoes):
         self.estado_inicial = estado_inicial
         self.estados_finais = estados_finais
@@ -29,3 +29,4 @@ class AFD:
                 saida += self.processarLinha(linha + ' ') + '\n'
                 linha = arquivo_entrada.readline()
             return saida[0:-1]
+
