@@ -57,6 +57,7 @@
               "lt": {" ": "LT", "\n": "LT", "=": "leq"},
               "leq": {" ": "LEQ", "\n": "LEQ"},
               "neg": {" ": "NEG", "\n": "NEG", "=": "dif"},
+              "dif": {" ": "DIF", "\n": "DIF"},
               "virgula": {" ": "Virgula", "\n": "Virgula"},
               "pvirgula": {" ": "PVirgula", "\n": "PVirgula"},
               "sum": {" ": "SUM", "\n": "SUM"},
